@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>A Leaflet map!</title>
+    <link rel="stylesheet" href="fire.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" ></script>
+    <script src="jquery-2.1.1.min.js"></script> 
+    <script src="data/firePerims.js"></script>
+    <script src="data/density.js"></script>
+    <style>
+    #mapContainer{ display: flex; justify-content: left; margin-left: 5%;}
+    #map{ height: 400px; width: 800px; }.legend{ line-height: 18px; color: #555;}
+    </style>
+</head>
+
+<body>
+        <div style="color: #ebe6e3; background-color: #928ec3; padding-left: 10px; 
+                padding-top: 1px; padding-bottom: 1px; font-size: larger; text-align: left; line-height: 30px;
+                width: 1000px;">
+		<p ><span style="font-size:125%; "><b>Hypothesis: </b> </span> <br>
+            Arial support for wildfires is dependent on proximity to high levels of population density.</p>
+	</div>
+    <div style = "padding-top: 25px; padding-bottom: 10px; color: #ebe6e3; font-size: larger">
+		<b></b></div>
+    <div id="mapContainer", text-align: center;>
+        <div id="map"></div> <br>
+    </div>
+    <div id="table", style="color: #796db2; table-layout: fixed; margin-left: 5%; margin-top: 20px;">
+        <table style="width:800px; height: 150px">
+        <tr>
+            <th>Highest Population <br>
+                Density within 10 Miles <br> 
+                (people/mi<sup>2</sup>)</th>
+            <td>0 - 5</td>
+            <td>5 - 10</td>
+            <td>10 - 15</td>
+            <td> 15 - 20</td>
+            <td>20+</td>
+            
+          </tr>
+          <tr>
+            <th>Proportion of Fires <br>
+                that Received Arial Support</th>
+            <td> 0.43 </td>
+            <td> 0.50 </td>
+            <td> 0.50 </td>
+            <td> 0.60 </td>
+            <td> 0.67 </td>
+          </tr>
+        </table>
+    </div>
+    <div style="color: #928ec3; padding-top: 50px; 
+				padding-left: 10px; text-align: left; 
+				font-size: smaller; opacity: 0.75; line-height: 23px;">
+        <p><span style="font-size:110%; "> <b>SOURCES:</b></span> <br>
+		    MTBS. <i>Direct Download.</i> Retreived 12 Dec 2022.
+                <a href="https://www.mtbs.gov/direct-download">
+                    https://www.mtbs.gov/direct-download</a><br>
+            Stonesifer, C (2022). <i>ATU Data of Record, 2017-2021</i>. Rocky Mountain Research Station. Missoula, MT. [geospatial dataset].
+        </p>
+    </div>
+    <script src="fire.js"></script> 
+</body>
+</html>
